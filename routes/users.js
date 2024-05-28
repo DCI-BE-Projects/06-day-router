@@ -12,4 +12,13 @@ router.post('/', (_, res) => {
     res.send('Todo created!');
 })
 
+// Chaining routes
+router.route('/')
+.get('/', (_, res) => {
+    res.send('Todos List');
+})
+.post('/', (_, res) => {
+    res.send('Todo created!');
+})
+
 export default router;
